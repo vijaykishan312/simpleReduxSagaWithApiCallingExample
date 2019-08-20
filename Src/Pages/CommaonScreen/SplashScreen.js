@@ -22,6 +22,10 @@ class SpalshScreen extends Component{
                 <Text>SUBMIT</Text>
                 </TouchableOpacity>
 
+                <TouchableOpacity style={{height:40, width:200, backgroundColor:"#DDDD", marginTop:20}} onPress={()=>this.props.navigation.navigate("HomeScreen")}>
+                <Text>GET EMPLOYEE DATA</Text>
+                </TouchableOpacity>
+
                 <View style={{flexDirection:"column"}}>
                     <Text style={{marginBottom:5}}>{data?data.name:''}</Text>
                     <Text style={{marginBottom:5}}>{data?data.salary:''}</Text>

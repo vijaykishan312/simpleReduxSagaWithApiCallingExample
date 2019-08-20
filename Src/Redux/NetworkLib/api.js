@@ -53,7 +53,7 @@ class Api {
         return 'http://dummy.restapiexample.com/api/v1/'+url
     }
 
-    getRequest=(URL,headers,screenRef)=>(
+   static getRequest=(URL,headers,screenRef)=>(
         new Promise(async(resolve,reject)=>{
             console.log("getRequest request "+this.getBaseURL(URL))
             let headerData =  ""; // Strings.token
@@ -66,6 +66,7 @@ class Api {
                 }
             })
             .then(function (response) {
+                console.log("getRequest response"+JSON.stringify(response))
                 resolve(response.data)
             })
             .catch(function (error) {

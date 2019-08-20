@@ -3,6 +3,7 @@ import {View} from 'react-native'
 import {  createStackNavigator,createAppContainer } from 'react-navigation';
 import Splash from '../Pages/CommaonScreen/SplashScreen';
 import { connect } from 'react-redux'
+import HomeScreen from '../Pages/CommaonScreen/HomeScreen';
 
 class MainFile extends Component{
     constructor(props){
@@ -24,6 +25,12 @@ const MainStack = createAppContainer(
     createStackNavigator({
         SplashScreen:{
             screen:Splash,
+            navigationOptions: {
+              header:null,
+            },
+          },
+          HomeScreen:{
+            screen:HomeScreen,
             navigationOptions: {
               header:null,
             },

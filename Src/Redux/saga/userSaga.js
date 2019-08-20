@@ -17,3 +17,13 @@ export function* loginRequest(action) {
     }
 }
 
+export function* getSingleEmployeeData(action) {
+    alert(JSON.stringify(action))
+    try {
+        const data = yield call(userService.getSingleEmployeeData, action.data);
+        yield put({type:types.GET_SINGLE_EMPLOYEE_DATA_RESPONSE, data})
+    } catch (error) {
+        console.log(" this is user loggin error in saga file . "+JSON.stringify(error))
+    }
+}
+
